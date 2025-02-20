@@ -6,6 +6,7 @@ import { useChat } from 'ai/react';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { MultimodalInput } from './multimodal-input';
+import Image from 'next/image';
 
 export function Chat({
   id,
@@ -53,7 +54,7 @@ export function Chat({
     <div className='relative h-screen w-full overflow-hidden'>
       <div className='absolute inset-0 bg-contain bg-center bg-no-repeat'>
         <div className='absolute inset-0 flex items-center justify-center'>
-          <div className='relative mx-auto flex h-full w-full flex-col'>
+          <div className='relative mx-auto flex h-full w-full flex-col pb-[2vw]'>
             <Link
               href='/'
               className={`absolute right-[20px] top-[20px] cursor-pointer`}
@@ -76,13 +77,13 @@ export function Chat({
             </Link>
             <div
               ref={chatContainerRef}
-              className='scrollbar-hide flex-1 overflow-y-auto bg-white p-4 pt-[60px] shadow-xl'
+              className='scrollbar-hide flex-1 overflow-y-auto  p-4 pt-[60px]  flex flex-col justify-end'
             >
               <PreviewMessage
                 key={''}
                 role={'assistant'}
                 content={
-                  'Hello, and welcome! I’m Lino, here to guide you with patience and care. Whatever brings you here today, let’s take it one step at a time. Life can feel like a puzzle, but together, we can make it all a little clearer. Don’t hesitate to reach out – we’re in this journey together, and I’m excited to help you discover something new. Let’s begin!'
+                  'hey hey hey'
                 }
                 attachments={[]}
                 toolInvocations={[]}
@@ -98,7 +99,7 @@ export function Chat({
               ))}
             </div>
 
-            <div className='w-full bg-[#F8F8F8] px-[20px] py-[18px] shadow-[0px_0px_12px_0px_rgba(0,0,0,0.10)]'>
+            <div className='w-full px-[1vw] py-[1vh] bg-[#2E1D17] rounded-[20px] border-[0.7vw] border-[#CE8C44]'>
               <form
                 onSubmit={handleSubmit}
                 className='flex flex-col gap-4 sm:flex-row'
@@ -118,23 +119,9 @@ export function Chat({
                 />
                 <button
                   type='submit'
-                  className='rounded-2xl border bg-[#A165D7] px-4 py-[10px]'
+                  className='rounded-2xl w-[5vw] px-4 py-[10px] hover:animate-shake'
                 >
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='24'
-                    height='24'
-                    viewBox='0 0 24 24'
-                    fill='none'
-                    stroke='#FFFFFF'
-                    strokeWidth='2'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    className='lucide lucide-send'
-                  >
-                    <path d='M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z' />
-                    <path d='m21.854 2.147-10.94 10.939' />
-                  </svg>
+                  <Image alt='' className='w-full' width={500} height={500} src={'/assets/chatbot/send.png'} />
                 </button>
               </form>
             </div>

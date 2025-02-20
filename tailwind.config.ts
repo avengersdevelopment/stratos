@@ -15,7 +15,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        dm: ["var(--font-dm)"],
+        main: ["var(--font-main)"],
       },
       container: {
         center: true,

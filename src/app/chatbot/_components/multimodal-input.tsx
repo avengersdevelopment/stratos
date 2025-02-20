@@ -72,7 +72,7 @@ export function MultimodalInput({
         onChange={handleInput}
         placeholder={placeholder}
         className={cn(
-          'relative z-20 min-h-[57px] resize-none overflow-hidden rounded-2xl bg-white font-sans text-lg',
+          'relative z-20 min-h-[57px] resize-none overflow-hidden text-[1.3vw] font-bold text-[#CE8C44]',
           className
         )}
         onKeyDown={(event: React.KeyboardEvent<HTMLTextAreaElement>) => {

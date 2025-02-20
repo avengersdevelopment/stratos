@@ -42,15 +42,15 @@ export const Message = ({
         )}
         <div
           className={cn(
-            `flex max-w-[80%] flex-col gap-2 rounded-bl-2xl rounded-tl-2xl rounded-tr-2xl bg-[#F8F8F8] px-4 py-2`,
+            `flex max-w-[80%] flex-col gap-2 rounded-2xl text-left text-[1.5vw] bg-[#633F33] text-white px-4 py-2 font-bold`,
             {
               '': role === 'assistant',
-              'bg-[#F8F8F8]': role === 'user'
+              'bg-[#CE8C44] text-[#633F33] text-right': role === 'user'
             }
           )}
         >
           {content && (
-            <div className='flex flex-col gap-4 text-lg font-normal text-black'>
+            <div className='flex flex-col gap-4  '>
               <Markdown>{content as string}</Markdown>
             </div>
           )}

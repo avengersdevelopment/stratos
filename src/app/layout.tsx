@@ -3,13 +3,19 @@ import Providers from "@/components/providers";
 import { createClient } from "@/utils/supabase/server";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { twMerge } from "tailwind-merge";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-dm",
+
+const main = localFont({
+  src: [
+    {
+      path: "../../public/assets/fonts/Penthouse-Serial.ttf",
+      weight: "400",
+    },
+  ],
+  variable: "--font-main",
 });
 
 export const metadata: Metadata = {
@@ -40,7 +46,7 @@ export default async function RootLayout({
     <>
       <Aos />
       <html lang="en" className="relative">
-        <body className={twMerge(dmSans.variable, "font-dm antialiased")}>
+        <body className={twMerge(main.variable, "font-main antialiased")}>
           <Providers config={configs?.[0] || null}>{children}</Providers>
         </body>
       </html>

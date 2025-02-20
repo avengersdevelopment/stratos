@@ -19,7 +19,7 @@ export default function Container() {
     <main className="relative h-full w-full">
       <Header />
       <Section1 />
-      <RunningText
+      {/* <RunningText
         marqueProps={{ direction: "right" }}
         image={
           <Image
@@ -37,7 +37,7 @@ export default function Container() {
       <Section3 />
       <RunningText coinName="$COIN" count={100} />
       <Section4 />
-      <Footer />
+      <Footer /> */}
     </main>
   );
 }
