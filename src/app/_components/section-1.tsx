@@ -33,7 +33,7 @@ export const Section1 = () => {
 
         <p className="text-bold text-[4vw] text-[#CD8C41]">STRATOS</p>
 
-        <Link className="relative h-fit w-fit hover:animate-shake" href={"/main"}>
+        <Link className="relative h-fit w-fit hover:animate-shake" href={"/select-character"}>
           <Image
             src={"/assets/homepage/button.png"}
             width={500}
