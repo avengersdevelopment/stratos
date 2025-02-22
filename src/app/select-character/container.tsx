@@ -1,7 +1,7 @@
 "use client";
 
 import Header from "@/components/header";
-import { div } from "framer-motion/client";
+import { blade, brute, bee, useCharacterStore } from "@/store/character-store";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -10,6 +10,8 @@ export default function Container() {
   const [isBladeHovered, setIsBladeHovered] = useState(false);
   const [isBruteHovered, setIsBruteHovered] = useState(false);
   const [isBeeHovered, setIsBeeHovered] = useState(false);
+
+  const { setCharacter } = useCharacterStore();
 
   return (
     <main className="relative h-screen w-full bg-[url('/assets/select-character/bg.png')] bg-cover bg-center">
@@ -27,7 +29,7 @@ export default function Container() {
             />
 
             {isBladeHovered ? (
-              <div onMouseLeave={() => setIsBladeHovered(false)}>
+              <div>
                 <Image
                   src={"/assets/select-character/blade.gif"}
                   alt="blade-gif"
@@ -37,7 +39,7 @@ export default function Container() {
                 />
               </div>
             ) : (
-              <div onMouseEnter={() => setIsBladeHovered(true)}>
+              <div>
                 <Image
                   src={"/assets/select-character/blade-silhouette.png"}
                   alt="blade-silhouette"
@@ -51,7 +53,10 @@ export default function Container() {
 
           <Link
             className="relative h-fit w-fit hover:animate-shake"
-            href={"/select-character"}
+            href={"/home"}
+            onClick={() => setCharacter(blade)}
+            onMouseEnter={() => setIsBladeHovered(true)}
+            onMouseLeave={() => setIsBladeHovered(false)}
           >
             <Image
               src={"/assets/homepage/button.png"}
@@ -77,7 +82,7 @@ export default function Container() {
             />
 
             {isBruteHovered ? (
-              <div onMouseLeave={() => setIsBruteHovered(false)}>
+              <div>
                 <Image
                   src={"/assets/select-character/brute.gif"}
                   alt="brute-gif"
@@ -87,7 +92,7 @@ export default function Container() {
                 />
               </div>
             ) : (
-              <div onMouseEnter={() => setIsBruteHovered(true)}>
+              <div>
                 <Image
                   src={"/assets/select-character/brute-silhouette.png"}
                   alt="brute-silhouette"
@@ -101,7 +106,10 @@ export default function Container() {
 
           <Link
             className="relative h-fit w-fit hover:animate-shake"
-            href={"/select-character"}
+            href={"/home"}
+            onClick={() => setCharacter(brute)}
+            onMouseEnter={() => setIsBruteHovered(true)}
+            onMouseLeave={() => setIsBruteHovered(false)}
           >
             <Image
               src={"/assets/homepage/button.png"}
@@ -127,7 +135,7 @@ export default function Container() {
             />
 
             {isBeeHovered ? (
-              <div onMouseLeave={() => setIsBeeHovered(false)}>
+              <div>
                 <Image
                   src={"/assets/select-character/bee.gif"}
                   alt="bee-gif"
@@ -137,7 +145,7 @@ export default function Container() {
                 />
               </div>
             ) : (
-              <div onMouseEnter={() => setIsBeeHovered(true)}>
+              <div>
                 <Image
                   src={"/assets/select-character/bee-silhouette.png"}
                   alt="bee-silhouette"
@@ -151,7 +159,10 @@ export default function Container() {
 
           <Link
             className="relative h-fit w-fit hover:animate-shake"
-            href={"/select-character"}
+            href={"/home"}
+            onClick={() => setCharacter(bee)}
+            onMouseEnter={() => setIsBeeHovered(true)}
+            onMouseLeave={() => setIsBeeHovered(false)}
           >
             <Image
               src={"/assets/homepage/button.png"}

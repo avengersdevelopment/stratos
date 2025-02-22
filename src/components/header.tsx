@@ -1,14 +1,18 @@
+"use client";
+
+import { useConfig } from "@/store/config";
 import Image from "next/image";
 import Link from "next/link";
-interface NavigationItem {
-  title: string;
-  link: string;
-}
 
 export const Header = () => {
+  const xCoinUrl = useConfig()((state) => state.config?.x_coin_url);
+  const buyUrl = useConfig()((state) => state.config?.buy_url);
+  const docsUrl = useConfig()((state) => state.config?.docs_url);
+
   return (
     <header className='fixed left-1/2 top-0 z-50 h-[18vh] w-full -translate-x-1/2 bg-[url("/assets/header/header.png")] bg-contain bg-no-repeat'>
       <div className="fixed left-[0.5vw] top-[1vh] flex h-[5vh] w-[33vw] gap-[1vw]">
+
         <Link className="relative h-fit w-fit hover:animate-shake" href={"/"}>
           <Image
             src={"/assets/header/button-1.png"}
@@ -21,7 +25,8 @@ export const Header = () => {
             Home
           </span>
         </Link>
-        <Link className="relative h-fit w-fit hover:animate-shake" href={"/"}>
+
+        <Link className="relative h-fit w-fit hover:animate-shake" href={buyUrl || ""}>
           <Image
             src={"/assets/header/button-2.png"}
             width={500}
@@ -36,7 +41,7 @@ export const Header = () => {
       </div>
 
       <div className="fixed right-[0.7vw] top-[1vh] flex h-[5vh] w-[33vw] gap-[1vw]">
-        <Link className="relative h-fit w-fit hover:animate-shake" href={"/"}>
+        <Link className="relative h-fit w-fit hover:animate-shake" href={docsUrl || ""}>
           <Image
             src={"/assets/header/button-2.png"}
             width={500}
@@ -48,7 +53,7 @@ export const Header = () => {
             Docs
           </span>
         </Link>
-        <Link className="relative h-fit w-fit hover:animate-shake" href={"/"}>
+        <Link className="relative h-fit w-fit hover:animate-shake" href={xCoinUrl || ""}>
           <Image
             src={"/assets/header/button-1.png"}
             width={500}
