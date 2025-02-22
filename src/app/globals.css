@@ -39,3 +39,25 @@
     @apply p-10 border border-[#222222]/10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full;
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff8d;
+  border-radius:20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #CD8C41;
+  border-radius:20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #955a16;
+}
