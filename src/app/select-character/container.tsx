@@ -31,7 +31,7 @@ export default function Container() {
             {isBladeHovered ? (
               <div>
                 <Image
-                  src={"/assets/select-character/blade.gif"}
+                  src={"/assets/select-character/blade1.gif"}
                   alt="blade-gif"
                   width={480}
                   height={480}
@@ -84,7 +84,7 @@ export default function Container() {
             {isBruteHovered ? (
               <div>
                 <Image
-                  src={"/assets/select-character/brute.gif"}
+                  src={"/assets/select-character/brute1.gif"}
                   alt="brute-gif"
                   width={480}
                   height={480}
@@ -137,7 +137,7 @@ export default function Container() {
             {isBeeHovered ? (
               <div>
                 <Image
-                  src={"/assets/select-character/bee.gif"}
+                  src={"/assets/select-character/bee1.gif"}
                   alt="bee-gif"
                   width={480}
                   height={480}
