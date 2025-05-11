@@ -62,7 +62,7 @@ export const Header = () => {
             className="w-[18vw]"
           />
           <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[2.5vw] font-bold text-[#CD8C41]">
-            {/* <svg className="w-[2.2vw]"
+            <svg className="w-[2.2vw]"
               width="300"
               height="301"
               viewBox="0 0 300 301"
@@ -80,7 +80,7 @@ export const Header = () => {
                   <rect width="300" height="300.251" fill="white" />
                 </clipPath>
               </defs>
-            </svg> */}
+            </svg>
           </span>
         </Link>
       </div>
