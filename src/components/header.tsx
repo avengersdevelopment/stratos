@@ -11,7 +11,7 @@ export const Header = () => {
 
   return (
     <header className='fixed left-1/2 top-0 z-50 h-[18vh] w-full -translate-x-1/2 bg-[url("/assets/header/header.png")] bg-contain bg-no-repeat'>
-      <div className="fixed left-[0.5vw] top-[1vh] flex h-[5vh] w-[33vw] gap-[1vw]">
+      <div className="fixed left-[0.5vw] top-[0.5vh] md:top-[1vh] flex h-[5vh] w-[33vw] gap-[1vw]">
 
         <Link className="relative h-fit w-fit hover:animate-shake" href={"/"}>
           <Image
@@ -40,7 +40,7 @@ export const Header = () => {
         </Link>
       </div>
 
-      <div className="fixed right-[0.7vw] top-[1vh] flex h-[5vh] w-[33vw] gap-[1vw]">
+      <div className="fixed right-[0.7vw] top-[0.5vh] md:top-[1vh] flex h-[5vh] w-[33vw] gap-[1vw]">
         <Link className="relative h-fit w-fit hover:animate-shake" href={docsUrl || ""}>
           <Image
             src={"/assets/header/button-2.png"}
@@ -62,7 +62,7 @@ export const Header = () => {
             className="w-[18vw]"
           />
           <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[2.5vw] font-bold text-[#CD8C41]">
-            <svg className="w-[2.2vw]"
+            {/* <svg className="w-[2.2vw]"
               width="300"
               height="301"
               viewBox="0 0 300 301"
@@ -80,7 +80,7 @@ export const Header = () => {
                   <rect width="300" height="300.251" fill="white" />
                 </clipPath>
               </defs>
-            </svg>
+            </svg> */}
           </span>
         </Link>
       </div>

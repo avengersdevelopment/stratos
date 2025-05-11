@@ -12,6 +12,7 @@ const config: Config = {
       sm: "375px",
       md: "768px",
       lg: "1200px",
+      lgHompage: "1000px",
     },
     extend: {
       fontFamily: {

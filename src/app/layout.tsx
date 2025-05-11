@@ -19,10 +19,10 @@ const main = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "App Name",
+  title: "Stratos",
   description: "App Description",
   openGraph: {
-    title: "App Name",
+    title: "Stratos",
     description: "App Description",
     url: "/",
     images: [
