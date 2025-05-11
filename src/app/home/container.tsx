@@ -147,7 +147,8 @@ export default function Container() {
           </div>
         </div>
       </section>
-      <section className="relative flex h-[50dvh] w-full items-center justify-center bg-[url('/assets/homepage/bg2.png')] bg-cover bg-center md:h-screen">
+      <section className="relative flex h-[50dvh] w-full items-center justify-center  md:h-screen">
+        <video src="/assets/homepage/videobg.mp4" autoPlay loop className="absolute h-full w-full object-cover object-center"></video>
         <div className="flex w-[30vw] items-center justify-center rounded-lg bg-black/30 p-5">
           <div className="text-[2.5vw] font-bold text-[#CD8C41]">
             Text or Something
