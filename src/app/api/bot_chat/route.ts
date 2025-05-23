@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import redis from "@/utils/redis";
 import openai from "@/utils/openai";
-import { getChapterPrompts } from "@/data/prompts";
+import { getChapterPrompts } from "@/utils/prompts";
 import { ChatCompletionMessageParam } from "openai/resources/chat/completions";
 
 interface ChatMessage {

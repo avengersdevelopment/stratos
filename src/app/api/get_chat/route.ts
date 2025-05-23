@@ -1,6 +1,6 @@
 import redis from "@/utils/redis";
 import { NextResponse } from "next/server";
-import { getCharacter } from "@/data/description";
+import { getCharacter } from "@/utils/description";
 
 interface ChatMessage {
   messageNo: number;
